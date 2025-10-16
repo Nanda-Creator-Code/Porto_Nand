@@ -117,27 +117,28 @@
           }
         },
         {
-          "src": "assets/projects/p2-ews/08-detail.jpg",
+          "src": "assets/projects/p2-ews/03-detail.jpg",
           "type": "detail",
           "fit": "cover",
           "downloadable": false,
           "date": "2024-06-11",
           "caption": {
-            "en": "HMI main screen developed in EasyBuilder Pro displays the site overview with all gas detector nodes and real-time status indicators.",
-            "id": "Tampilan utama HMI yang dibuat dengan EasyBuilder Pro menampilkan overview lokasi dengan seluruh node detektor gas dan indikator status secara real-time."
+            "en": "Performed wiring on EWS control panels, trial test on Weintek MTV using EasyBuilder Pro, and calibration of Honeywell XCD gas detector sensors during system integration.",
+            "id": "Melakukan wiring pada panel kontrol EWS, uji coba tampilan MTV Weintek menggunakan EasyBuilder Pro, serta kalibrasi sensor gas detector Honeywell XCD selama proses integrasi sistem."
           }
         },
         {
-          "src": "assets/projects/p2-ews/09-detail.jpg",
+          "src": "assets/projects/p2-ews/04-detail.jpg",
           "type": "detail",
           "fit": "cover",
           "downloadable": false,
           "date": "2024-06-11",
           "caption": {
-            "en": "HMI features multiple pages—sensor monitoring, sensor setup, trending, and alarm history—allowing users to configure and track gas level changes accurately.",
-            "id": "HMI memiliki beberapa halaman—monitoring sensor, pengaturan sensor, trending, dan riwayat alarm—yang memungkinkan pengguna mengatur serta memantau perubahan kadar gas secara akurat."
+            "en": "Executed final wiring and system verification for EWS panels installed at Pertamina Patra Niaga site, ensuring all field sensors and alarms operated according to design.",
+            "id": "Melaksanakan wiring akhir dan verifikasi sistem untuk panel EWS yang terpasang di site Pertamina Patra Niaga, memastikan seluruh sensor lapangan dan alarm berfungsi sesuai rancangan."
           }
         },
+
         {
           "src": "assets/projects/p2-ews/05-detail.jpg",
           "type": "detail",
@@ -161,17 +162,6 @@
           }
         },
         {
-          "src": "assets/projects/p2-ews/03-detail.jpg",
-          "type": "detail",
-          "fit": "cover",
-          "downloadable": false,
-          "date": "2024-06-11",
-          "caption": {
-            "en": "Performed wiring on EWS control panels, trial test on Weintek MTV using EasyBuilder Pro, and calibration of Honeywell XCD gas detector sensors during system integration.",
-            "id": "Melakukan wiring pada panel kontrol EWS, uji coba tampilan MTV Weintek menggunakan EasyBuilder Pro, serta kalibrasi sensor gas detector Honeywell XCD selama proses integrasi sistem."
-          }
-        },
-        {
           "src": "assets/projects/p2-ews/07-detail.jpg",
           "type": "detail",
           "fit": "cover",
@@ -183,14 +173,25 @@
           }
         },
         {
-          "src": "assets/projects/p2-ews/04-detail.jpg",
+          "src": "assets/projects/p2-ews/08-detail.jpg",
           "type": "detail",
           "fit": "cover",
           "downloadable": false,
           "date": "2024-06-11",
           "caption": {
-            "en": "Executed final wiring and system verification for EWS panels installed at Pertamina Patra Niaga site, ensuring all field sensors and alarms operated according to design.",
-            "id": "Melaksanakan wiring akhir dan verifikasi sistem untuk panel EWS yang terpasang di site Pertamina Patra Niaga, memastikan seluruh sensor lapangan dan alarm berfungsi sesuai rancangan."
+            "en": "HMI main screen developed in EasyBuilder Pro displays the site overview with all gas detector nodes and real-time status indicators.",
+            "id": "Tampilan utama HMI yang dibuat dengan EasyBuilder Pro menampilkan overview lokasi dengan seluruh node detektor gas dan indikator status secara real-time."
+          }
+        },
+        {
+          "src": "assets/projects/p2-ews/09-detail.jpg",
+          "type": "detail",
+          "fit": "cover",
+          "downloadable": false,
+          "date": "2024-06-11",
+          "caption": {
+            "en": "HMI features multiple pages—sensor monitoring, sensor setup, trending, and alarm history—allowing users to configure and track gas level changes accurately.",
+            "id": "HMI memiliki beberapa halaman—monitoring sensor, pengaturan sensor, trending, dan riwayat alarm—yang memungkinkan pengguna mengatur serta memantau perubahan kadar gas secara akurat."
           }
         }
       ]
