@@ -867,3 +867,99 @@ footer {
     height: 54px;
   }
 }
+/* --- NAV MOBILE FIX --- */
+@media (max-width: 520px) {
+  /* jadikan bar nav fleksibel dan bisa turun baris */
+  header .nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* grup link (Projects/Skills/About/Contact) bisa di-swipe kiri-kanan */
+  header nav,
+  header .menu,
+  header .nav-menu,
+  header .topnav {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    max-width: 100%;
+  }
+  header nav a,
+  header .menu a,
+  header .nav-menu a,
+  header .topnav a {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+
+  /* kelompok di kanan (cta “Portfolio”, toggle ID/EN) selalu terlihat */
+  header .cta-group,
+  header .lang,
+  header .right {
+    margin-left: auto;
+    flex: 0 0 auto;
+  }
+
+  /* kalau ada pill besar (mis. “Portfolio”) jangan melebar */
+  header .cta-group .btn {
+    max-width: 46vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+/* --- PROJECT TAG OVERLAP FIX --- */
+@media (max-width: 520px) {
+  /* jika tag/badge diposisikan absolute di pojok kartu, ubah jadi normal flow */
+  .proj-card [class*="tag"],
+  .proj-card .badge,
+  .proj-card .chip {
+    position: static !important;
+    margin: 2px 6px 8px 0;
+    display: inline-flex;
+  }
+  /* pastikan header judul tidak ketiban elemen lain */
+  .proj-card header {
+    display: flex;
+    flex-direction: column;
+  }
+  .proj-card h3,
+  .proj-card .card-title {
+    margin-top: 4px;
+    word-break: break-word;
+  }
+}
+/* --- ACHIEVEMENT FILTER SCROLL --- */
+.achv-controls,
+.org-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.segmented {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+.segmented .seg {
+  flex: 0 0 auto; /* tombol tidak menyusut */
+  white-space: nowrap;
+}
+h1,
+h2,
+h3,
+.card-title,
+.achv-title,
+.org-title {
+  word-break: break-word;
+  hyphens: auto;
+}
