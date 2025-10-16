@@ -491,7 +491,7 @@ function openProject(slug) {
     console.warn("project not found", slug);
     return;
   }
-  PG.cur = { slug, idx: 0, list: proj.photos.slice(0, 8) }; // max 8 foto
+  PG.cur = { slug, idx: 0, list: proj.photos.slice(0, 9) }; // max 8 foto
   PG.els.title.textContent =
     proj.title?.[document.documentElement.lang] || proj.title?.en || "";
   applyPhoto(0);
