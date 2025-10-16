@@ -7,7 +7,7 @@
       "year": 2025,
       "provider": { "id": "LSP ITS", "en": "LSP ITS" },
       "logo": "assets/org/lsp-its.jpg",
-      "certFile": "assets/cert/plc-programming-bnsp-2025.pdf",
+      "certFile": "assets/cert/plc-programming-bnsp-2025.PDF",
       "tags": ["PLC", "BNSP"]
     },
     {
