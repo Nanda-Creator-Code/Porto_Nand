@@ -912,23 +912,32 @@ footer {
     white-space: nowrap;
     overflow: hidden;
   }
-}
-/* ===== Featured Project: force category pills to bottom-right on mobile ===== */
+} /* ====== FEATURED PROJECTS — mobile: category pill bottom-right ====== */
 @media (max-width: 520px) {
-  .proj-card {
+  .card {
     position: relative;
-    padding-bottom: 56px; /* ruang untuk pill di bawah */
-    overflow: hidden; /* cegah pill keluar kontainer */
-  }
-
-  /* Jika ada WRAPPER tag (coba beberapa nama umum) → jadikan absolute */
-  .proj-card .tags,
-  .proj-card .proj-tags,
-  .proj-card .card-tags,
-  .proj-card header .tags {
+    padding-bottom: 58px;
+    overflow: hidden;
+  } /* ruang untuk pill */
+  /* pindahkan badge/label kategori ke kanan-bawah */
+  .card .badge,
+  .card .chip,
+  .card [class*="tag"] {
     position: absolute !important;
-    right: 14px !important;
-    bottom: 14px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    z-index: 3;
+  }
+  /* jika badge dibungkus wrapper .tags/proj-tags */
+  .card .tags,
+  .card .proj-tags,
+  .card header .tags {
+    position: absolute !important;
+    right: 16px !important;
+    bottom: 16px !important;
     left: auto !important;
     top: auto !important;
     display: flex !important;
@@ -937,72 +946,50 @@ footer {
     justify-content: flex-end;
     z-index: 3;
   }
-
-  /* Jika TIDAK ada wrapper dan yang absolute adalah pill-nya langsung */
-  .proj-card .badge,
-  .proj-card .badge-small,
-  .proj-card .chip,
-  .proj-card .tag,
-  .proj-card [class*="tag"] {
-    position: absolute !important;
-    right: 14px !important;
-    bottom: 14px !important;
-    left: auto !important;
-    top: auto !important;
-    margin: 0 !important;
-    transform: none !important;
-    z-index: 3;
-  }
-
-  /* Judul aman tidak ketiban */
-  .proj-card h3,
-  .proj-card .card-title {
-    margin-top: 2px;
-    word-break: break-word;
-  }
 }
 
-/* ==== Achievements controls – desktop & mobile ==== */
-/* Desktop / default: sejajar satu baris */
+/* ====== ACHIEVEMENTS — controls: desktop sama seperti awal ====== */
+#achv .achv-controls,
 #achv .org-controls {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: nowrap;
 }
-#achv .org-controls .muted {
-  margin-right: 4px;
-}
+#achv .achv-controls .segmented,
 #achv .org-controls .segmented {
   display: inline-flex;
   flex-wrap: nowrap;
-  overflow: visible; /* tidak scroll di desktop */
+  overflow: visible;
   max-width: none;
 }
+#achv .achv-controls .seg,
 #achv .org-controls .seg {
   white-space: nowrap;
 }
 
-/* Mobile: label di atas, tombol di bawah (2 blok) */
+/* ====== ACHIEVEMENTS — mobile: label di atas, segmented di bawah ====== */
 @media (max-width: 520px) {
+  #achv .achv-controls,
   #achv .org-controls {
     display: grid;
     grid-template-columns: 1fr; /* 1 kolom: Filter, [seg], Sort, [seg] */
     row-gap: 6px;
     align-items: start;
   }
-  /* hilangkan margin kiri label kedua yang mungkin ada inline-style */
+  #achv .achv-controls .muted,
   #achv .org-controls .muted {
     margin-left: 0 !important;
   }
-
+  #achv .achv-controls .segmented,
   #achv .org-controls .segmented {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto; /* bisa geser kalau kepanjangan */
+    overflow-x: auto; /* bisa geser bila panjang */
     -webkit-overflow-scrolling: touch;
     max-width: 100%;
   }
+  #achv .achv-controls .seg,
   #achv .org-controls .seg {
     flex: 0 0 auto;
     white-space: nowrap;
