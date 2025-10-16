@@ -913,26 +913,48 @@ footer {
     overflow: hidden;
   }
 }
-
-/* === Featured Project: mobile badge bottom-right === */
+/* ===== Featured Project: force category pills to bottom-right on mobile ===== */
 @media (max-width: 520px) {
   .proj-card {
     position: relative;
-    padding-bottom: 56px;
-  } /* ruang untuk badge */
-
-  /* paksa semua elemen kategori (tag/badge/chip) ke pojok kanan-bawah */
-  .proj-card .badge,
-  .proj-card .chip,
-  .proj-card [class*="tag"] {
-    position: absolute !important;
-    right: 14px;
-    bottom: 14px;
-    margin: 0;
-    z-index: 2;
+    padding-bottom: 56px; /* ruang untuk pill di bawah */
+    overflow: hidden; /* cegah pill keluar kontainer */
   }
 
-  /* judul aman, tidak ketiban */
+  /* Jika ada WRAPPER tag (coba beberapa nama umum) → jadikan absolute */
+  .proj-card .tags,
+  .proj-card .proj-tags,
+  .proj-card .card-tags,
+  .proj-card header .tags {
+    position: absolute !important;
+    right: 14px !important;
+    bottom: 14px !important;
+    left: auto !important;
+    top: auto !important;
+    display: flex !important;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+
+  /* Jika TIDAK ada wrapper dan yang absolute adalah pill-nya langsung */
+  .proj-card .badge,
+  .proj-card .badge-small,
+  .proj-card .chip,
+  .proj-card .tag,
+  .proj-card [class*="tag"] {
+    position: absolute !important;
+    right: 14px !important;
+    bottom: 14px !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 3;
+  }
+
+  /* Judul aman tidak ketiban */
   .proj-card h3,
   .proj-card .card-title {
     margin-top: 2px;
