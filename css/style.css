@@ -913,108 +913,76 @@ footer {
     overflow: hidden;
   }
 }
-/* --- PROJECT TAG OVERLAP FIX --- */
+
+/* === Featured Project: mobile badge bottom-right === */
 @media (max-width: 520px) {
-  /* jika tag/badge diposisikan absolute di pojok kartu, ubah jadi normal flow */
-  .proj-card [class*="tag"],
+  .proj-card {
+    position: relative;
+    padding-bottom: 56px;
+  } /* ruang untuk badge */
+
+  /* paksa semua elemen kategori (tag/badge/chip) ke pojok kanan-bawah */
   .proj-card .badge,
-  .proj-card .chip {
-    position: static !important;
-    margin: 2px 6px 8px 0;
-    display: inline-flex;
+  .proj-card .chip,
+  .proj-card [class*="tag"] {
+    position: absolute !important;
+    right: 14px;
+    bottom: 14px;
+    margin: 0;
+    z-index: 2;
   }
-  /* pastikan header judul tidak ketiban elemen lain */
-  .proj-card header {
-    display: flex;
-    flex-direction: column;
-  }
+
+  /* judul aman, tidak ketiban */
   .proj-card h3,
   .proj-card .card-title {
-    margin-top: 4px;
+    margin-top: 2px;
     word-break: break-word;
   }
 }
-/* --- ACHIEVEMENT FILTER SCROLL --- */
-.achv-controls,
-.org-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
 
-.segmented {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  max-width: 100%;
-}
-.segmented .seg {
-  flex: 0 0 auto; /* tombol tidak menyusut */
-  white-space: nowrap;
-}
-h1,
-h2,
-h3,
-.card-title,
-.achv-title,
-.org-title {
-  word-break: break-word;
-  hyphens: auto;
-}
-
-/* === FIX: tag/badge di kartu proyek tidak menabrak judul === */
-.proj-card {
-  position: relative;
-}
-.proj-card header {
-  display: flex;
-  flex-direction: column;
-}
-
-/* apapun kelasnya (tag/badge/chip) jangan absolute */
-.proj-card [class*="tag"],
-.proj-card .badge,
-.proj-card .chip {
-  position: static !important;
-  margin: 2px 8px 8px 0;
-  display: inline-flex;
-  z-index: auto !important;
-}
-
-/* beri jarak kecil sebelum judul */
-.proj-card h3,
-.proj-card .card-title {
-  margin-top: 4px;
-  word-break: break-word;
-}
-
-/* === FIX: layout kontrol Achievements (filter & sort) === */
+/* ==== Achievements controls – desktop & mobile ==== */
+/* Desktop / default: sejajar satu baris */
 #achv .org-controls {
-  display: grid;
-  grid-template-columns: auto 1fr auto 1fr; /* Filter: [..]  Sort: [..] */
-  gap: 10px;
+  display: flex;
   align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;
 }
-
+#achv .org-controls .muted {
+  margin-right: 4px;
+}
 #achv .org-controls .segmented {
   display: inline-flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  max-width: 100%;
+  overflow: visible; /* tidak scroll di desktop */
+  max-width: none;
 }
-
 #achv .org-controls .seg {
-  flex: 0 0 auto;
   white-space: nowrap;
 }
 
-/* mobile: tumpuk 2 baris: Filter (segmented), lalu Sort (segmented) */
+/* Mobile: label di atas, tombol di bawah (2 blok) */
 @media (max-width: 520px) {
   #achv .org-controls {
-    grid-template-columns: auto 1fr;
-    grid-auto-rows: auto;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 kolom: Filter, [seg], Sort, [seg] */
+    row-gap: 6px;
+    align-items: start;
+  }
+  /* hilangkan margin kiri label kedua yang mungkin ada inline-style */
+  #achv .org-controls .muted {
+    margin-left: 0 !important;
+  }
+
+  #achv .org-controls .segmented {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* bisa geser kalau kepanjangan */
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  #achv .org-controls .seg {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }

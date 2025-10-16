@@ -378,61 +378,6 @@
             "en": "Hardware development includes layout design, PCB routing, system architecture, and schematic diagrams for the ATmega-8535 trainer kit. Each part defines component arrangement, circuit flow, and connectivity between peripherals such as sensors, actuators, and communication ports.",
             "id": "Pengembangan hardware mencakup desain layout, jalur PCB, arsitektur sistem, dan diagram skematik untuk trainer kit ATmega-8535. Setiap bagian menjelaskan penataan komponen, alur rangkaian, serta konektivitas antara periferal seperti sensor, aktuator, dan port komunikasi."
           }
-        },
-        {
-          "src": "assets/projects/p7-atmega/03-detail.jpg",
-          "type": "detail",
-          "fit": "cover",
-          "downloadable": false,
-          "date": "2024-06-11",
-          "caption": {
-            "en": "CHardware configuration maps I/O and VFD parameters; wiring closes feedback and drive circuits.",
-            "id": "Konfigurasi hardware memetakan I/O dan parameter VFD; pengkabelan menutup rangkaian umpan balik dan penggerak."
-          }
-        },
-        {
-          "src": "assets/projects/p7-atmega/04-detail.jpg",
-          "type": "detail",
-          "fit": "cover",
-          "downloadable": false,
-          "date": "2024-06-11",
-          "caption": {
-            "en": "System architecture links PLC, sensors, and actuators to the VFD over PROFINET/PROFIDrive.",
-            "id": "Arsitektur sistem menghubungkan PLC, sensor, dan aktuator ke VFD melalui PROFINET/PROFIDrive."
-          }
-        },
-        {
-          "src": "assets/projects/p7-atmega/05-detail.jpg",
-          "type": "detail",
-          "fit": "cover",
-          "downloadable": false,
-          "date": "2024-06-11",
-          "caption": {
-            "en": "Control flow reads pressure, adjusts VFD frequency, and verifies limit-switch states.",
-            "id": "Alur kontrol membaca tekanan, menyesuaikan frekuensi VFD, dan memverifikasi status limit switch."
-          }
-        },
-        {
-          "src": "assets/projects/p7-atmega/06-detail.jpg",
-          "type": "detail",
-          "fit": "cover",
-          "downloadable": false,
-          "date": "2024-06-11",
-          "caption": {
-            "en": "Tuned PID holds pressure stable with quicker settling and minimal oscillation.",
-            "id": "PID yang dituning menstabilkan tekanan dengan waktu tunak lebih cepat dan osilasi minimal."
-          }
-        },
-        {
-          "src": "assets/projects/p7-atmega/07-detail.jpg",
-          "type": "detail",
-          "fit": "cover",
-          "downloadable": false,
-          "date": "2024-06-11",
-          "caption": {
-            "en": "Frequency trend reduces oscillations after optimization, delivering smoother fan operation.",
-            "id": "Tren frekuensi menurun osilasinya setelah optimasi, menghasilkan operasi kipas yang lebih mulus."
-          }
         }
       ]
     }
