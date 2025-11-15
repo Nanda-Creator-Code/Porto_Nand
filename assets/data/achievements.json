@@ -40,7 +40,7 @@
       "year": 2024,
       "provider": { "id": "Dicoding", "en": "Dicoding" },
       "logo": "assets/org/dicoding.jpg",
-      "certFile": "assets/cert/dicoding-devops-basic-2024.pdf",
+      "certFile": "assets/cert/dicoding-DevOps-2023.pdf",
       "tags": ["DevOps"]
     },
     {
