@@ -37,7 +37,7 @@
     {
       "type": "training",
       "title": { "id": "Dasar Dasar DevOps", "en": "Basic DevOps" },
-      "year": 2024,
+      "year": 2023,
       "provider": { "id": "Dicoding", "en": "Dicoding" },
       "logo": "assets/org/dicoding.jpg",
       "certFile": "assets/cert/dicoding-DevOps-2023.pdf",
